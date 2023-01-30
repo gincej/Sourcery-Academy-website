@@ -1,0 +1,30 @@
+.radio-form-container {
+  margin: auto;
+  margin: 4rem 0;
+
+  .radio-form {
+    color: $purpleblue-light;
+    font-weight: $weight-regular;
+    position: relative;
+
+    &__span {
+      color: $pink;
+      font-weight: $weight-bold;
+      left: -0.8rem;
+      position: absolute;
+    }
+
+    &__title {
+      color: $purpleblue-light;
+      font-size: $body-small;
+    }
+  }
+}
+
+.radio-buttons-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 0.5rem;
+  margin-top: 1.65rem;
+}

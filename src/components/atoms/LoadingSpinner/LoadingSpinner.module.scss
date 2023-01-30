@@ -1,0 +1,33 @@
+@keyframes Rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  align-self: center;
+  animation: Rotate 1.2s linear 0s infinite forwards;
+  border: 4px solid $white-smoke;
+  border-radius: 50%;
+  border-top-color: $grey-carbon;
+  padding: 0;
+
+  &--small {
+    height: $spinner-small;
+    width: $spinner-small;
+  }
+
+  &--medium {
+    height: $spinner-medium;
+    width: $spinner-medium;
+  }
+
+  &--large {
+    height: $spinner-large;
+    width: $spinner-large;
+  }
+}

@@ -1,0 +1,55 @@
+.btn {
+  background: $purpleblue-light no-repeat center;
+  background-size: 2.8rem;
+  border: 0;
+  cursor: pointer;
+  height: 4.8rem;
+  min-width: 6.4rem;
+  padding: 0;
+  position: relative;
+  transition: background-color 0.3s ease-in-out;
+  z-index: 50;
+
+  &--hovered {
+    background-color: $purpleblue;
+  }
+
+  &:focus-visible {
+    outline: $orange dashed 0.4rem;
+    outline-offset: -0.4rem;
+  }
+
+  &:hover {
+    background-color: $purpleblue;
+  }
+
+  &--unmuted {
+    background-image: url('../../../../assets/icons/player/volume_up.svg');
+  }
+
+  &--muted {
+    background-image: url('../../../../assets/icons/player/volume_off.svg');
+  }
+
+  &--play {
+    background-image: url('../../../../assets/icons/player/play_arrow.svg');
+  }
+
+  &--pause {
+    background-image: url('../../../../assets/icons/player/pause.svg');
+  }
+
+  &--fullscreen {
+    background-image: url('../../../../assets/icons/player/fullscreen.svg');
+  }
+
+  &--settings {
+    background-image: url('../../../../assets/icons/player/settings.svg');
+  }
+
+  @media (max-width: $screen-sm) {
+    background-size: 2rem;
+    max-height: 4rem;
+    min-width: 4rem;
+  }
+}

@@ -1,0 +1,21 @@
+.academiesheader {
+  align-items: center;
+  background-image: url('/assets/images/academies-description-particles.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  @media screen and (max-width: $screen-md) {
+    background-image: none;
+  }
+
+  p {
+    margin-bottom: 3.5rem;
+    max-width: 99.3rem;
+    text-align: center;
+  }
+}

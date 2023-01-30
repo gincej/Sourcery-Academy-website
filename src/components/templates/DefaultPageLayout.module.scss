@@ -1,0 +1,37 @@
+body {
+  min-width: $min-screen-width;
+}
+
+main {
+  margin: 0 auto;
+  max-width: $max-screen-width;
+}
+
+// min-height is calculated screen height minus header and footer (7 rem, 7 / 9 rem depends on screen-width)
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  min-height: calc(100vh - 14rem);
+  padding: 0 8rem;
+  @media screen and (max-width: $screen-md) {
+    padding: 0 5rem;
+  }
+  @media screen and (max-width: $screen-sm) {
+    padding: 0 3rem;
+  }
+
+  > * {
+    padding: 8rem 0;
+
+    @media screen and (max-width: $screen-md) {
+      padding: 5rem 0;
+    }
+
+    @media screen and (max-width: $screen-sm) {
+      overflow-x: hidden;
+      padding: 3rem 0;
+    }
+  }
+}

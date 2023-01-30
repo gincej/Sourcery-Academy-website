@@ -1,0 +1,114 @@
+.nav {
+  align-items: center;
+  color: $purple;
+  display: flex;
+  font-family: $family-body;
+  position: absolute;
+  right: 0;
+  width: 100%;
+
+  @media screen and (min-width: $screen-md) {
+    position: relative;
+    width: auto;
+    z-index: 0;
+  }
+
+  &__toggleMenu {
+    display: none;
+
+    @media screen and (min-width: $screen-md) {
+      display: flex;
+    }
+  }
+
+  &__list {
+    align-items: center;
+    background-color: $white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 1.5rem 0 0;
+    padding: 2rem 0 3rem;
+    position: absolute;
+    top: 1rem;
+    width: 100%;
+
+    @media screen and (min-width: $screen-md) {
+      box-shadow: none;
+      flex-direction: row;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      top: 0;
+    }
+  }
+
+  &__list li {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-size: $body-regular;
+    font-weight: $weight-bold;
+    list-style: none;
+
+    @media screen and (min-width: $screen-md) {
+      font-weight: $weight-regular;
+    }
+
+    a {
+      align-items: center;
+      color: $purple;
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      @media screen and (min-width: $screen-md) {
+        font-weight: $weight-regular;
+      }
+
+      &:hover {
+        color: $purple-light;
+      }
+
+      &:focus-visible {
+        outline: $border-width-4 dashed $orange;
+      }
+
+      @media screen and (min-width: $screen-md) {
+        justify-content: left;
+      }
+    }
+  }
+
+  &__list button {
+    &:focus-visible {
+      outline: $border-width-4 dashed $orange;
+    }
+  }
+
+  &__academies {
+    align-items: center;
+    background-color: transparent;
+    border: var(--none);
+    color: $purple;
+    cursor: pointer;
+    display: flex;
+    font-family: $family-body;
+    font-size: $body-regular;
+    font-weight: $weight-bold;
+    gap: 0.5rem;
+    justify-content: center;
+
+    &:hover {
+      color: $purple-light;
+    }
+
+    @media screen and (min-width: $screen-md) {
+      font-weight: $weight-regular;
+      justify-content: left;
+    }
+  }
+}

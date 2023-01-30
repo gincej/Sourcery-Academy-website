@@ -1,0 +1,66 @@
+.slider {
+  align-items: center;
+  background-color: $purpleblue;
+  bottom: -3.8rem;
+  cursor: default;
+  display: flex;
+  height: 6.4rem;
+  padding: 0 1rem;
+  position: absolute;
+  right: 10.6rem;
+  transform: rotate(-90deg);
+  transition: bottom 0.3s ease-in-out;
+
+  @media (max-width: $screen-sm) {
+    bottom: -2.4rem;
+    height: 4rem;
+    right: 5.6rem;
+  }
+
+  input[type='range'] {
+    appearance: none;
+    cursor: pointer;
+    height: 1rem;
+    width: 8.4rem;
+
+    @media (max-width: $screen-sm) {
+      width: 6.4rem;
+    }
+
+    &:focus-visible {
+      outline: $orange dashed 0.4rem;
+    }
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      background-color: $white;
+      border: 0.2rem solid $skyblue;
+      border-radius: 1rem;
+      cursor: pointer;
+      height: 3.4rem;
+      width: 1.2rem;
+
+      @media (max-width: $screen-sm) {
+        height: 2.8rem;
+        width: 0.8rem;
+      }
+    }
+  }
+
+  &--display {
+    bottom: 6.8rem;
+
+    @media (max-width: $screen-sm) {
+      bottom: 6.4rem;
+    }
+  }
+
+  &--focused {
+    bottom: 6.8rem;
+    transition: none;
+
+    @media (max-width: $screen-sm) {
+      bottom: 6.4rem;
+    }
+  }
+}

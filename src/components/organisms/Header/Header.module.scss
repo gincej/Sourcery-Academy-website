@@ -1,0 +1,73 @@
+.shadow {
+  background-color: var(--color-background-default);
+  box-shadow: 0 10px 10px 0 rgb(149 157 165 / 20%);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  transition: box-shadow 1s linear;
+  z-index: 10;
+
+  &__layout {
+    align-items: center;
+    background-color: var(--color-background-default);
+    display: flex;
+    height: 7rem;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 40px;
+    z-index: inherit;
+    @media only screen and (max-width: $screen-sm) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+  }
+
+  &__burger-menu {
+    background-color: transparent;
+    border: var(--none);
+    cursor: pointer;
+    display: flex;
+
+    @media screen and (min-width: $screen-md) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    cursor: pointer;
+    display: flex;
+    font-family: $family-body;
+    font-size: $body-regular;
+    height: 40px;
+    justify-content: space-between;
+    letter-spacing: 0;
+    line-height: 21px;
+
+    h1 {
+      align-self: center;
+      color: $purple;
+      font-family: $family-body;
+      font-size: $body-regular;
+      margin: 0;
+      padding-left: 1rem;
+    }
+  }
+}
+
+.overlay {
+  background-color: rgba(var(--color-overlay), 0.6);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+
+  @media screen and (min-width: $screen-md) {
+    display: none;
+  }
+}

@@ -1,0 +1,70 @@
+@import '../../../sass/utilities/mixins/academies-descriptions';
+
+.academies-description {
+  display: flex;
+  position: relative;
+  width: 100%;
+
+  @include column-reverse-margin;
+
+  &--reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 15rem 0;
+    position: relative;
+    width: 100%;
+
+    @include column-reverse-margin;
+  }
+
+  &__description {
+    padding-right: 5rem;
+    width: 50%;
+
+    @include description-break;
+
+    &--reverse {
+      padding-left: 3rem;
+      padding-right: 0;
+      text-align: right;
+      width: 50%;
+
+      @include description-break;
+    }
+  }
+
+  &__image {
+    margin: auto 0;
+    text-align: center;
+    width: 50%;
+
+    @media (max-width: 1044px) {
+      width: 100%;
+    }
+  }
+}
+
+.academy-image {
+  max-width: calc(25rem + 20%);
+  object-fit: contain;
+}
+
+.accent-image {
+  &__sourcery {
+    @include accent-image-positioning(auto, -8rem, -50rem, 66.5rem);
+    @include accent-image-positioning-at-1280(auto, -35rem, 55rem);
+    @include hide-image;
+  }
+
+  &__testers {
+    @include accent-image-positioning(-8rem, auto, -43rem, 66.5rem);
+    @include accent-image-positioning-at-1280(-23rem, -43rem, 66.5rem);
+    @include hide-image;
+  }
+
+  &__kids {
+    @include accent-image-positioning(auto, -8rem, -64rem, 63rem);
+    @include accent-image-positioning-at-1280(auto, -53rem, 48rem);
+    @include hide-image;
+  }
+}

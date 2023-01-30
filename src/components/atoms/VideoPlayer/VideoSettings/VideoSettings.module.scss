@@ -1,0 +1,57 @@
+.settings {
+  animation: slideIn 0.3s ease-in-out forwards;
+  background-color: $purpleblue;
+  display: flex;
+  flex-direction: column;
+  height: 14.4rem;
+  padding: 0.5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 12.8rem;
+  z-index: -10;
+
+  p {
+    color: $white;
+    font-size: $body-small;
+    margin: 0;
+    margin-block: 0.5rem;
+    text-align: center;
+  }
+
+  @media (max-width: $screen-sm) {
+    height: 16rem;
+    width: 8rem;
+  }
+
+  &--display {
+    animation: slideOut 0.3s ease-in-out forwards;
+  }
+
+  input[type='radio']:checked + label {
+    background-color: $skyblue;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    display: none;
+    transform: translateY(0);
+  }
+
+  100% {
+    background-color: $purpleblue;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    display: none;
+    transform: translateY(0);
+  }
+}

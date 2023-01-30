@@ -1,0 +1,33 @@
+.questions {
+  align-items: center;
+  background-image: url('../../assets/images/QuestionsParticles.svg');
+  background-position: top;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+
+  &__title {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  @media screen and (max-width: $screen-md) {
+    &__title {
+      font-size: $heading-s;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-md) {
+  .questions {
+    background-image: none;
+  }
+}
+
+@media screen and (max-width: $screen-sm) {
+  .questions {
+    gap: 1rem;
+  }
+}

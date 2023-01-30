@@ -1,0 +1,24 @@
+.slider-button {
+  display: inline-flex;
+  opacity: 0;
+  position: absolute;
+
+  &__label {
+    align-self: center;
+    border: 0;
+    border-radius: 3rem;
+    color: $grey;
+    cursor: pointer;
+    font-family: $family-body;
+    font-weight: $weight-bold;
+    padding: 1.2rem;
+    text-align: center;
+    width: 100%;
+
+    &.active {
+      color: $white;
+      transition-delay: 0.25s;
+      z-index: 3;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.academies-section {
+  background-image: url('../../../assets/images/home-academies/particles.svg');
+  background-position: 0 4rem;
+  background-repeat: no-repeat;
+  background-size: 116rem;
+  margin-top: 20rem;
+
+  h3 {
+    background-color: $white;
+  }
+
+  p {
+    background-color: $white;
+    margin-bottom: 5rem;
+  }
+
+  @media screen and (max-width: 1044px) {
+    background-image: none;
+    margin-top: unset;
+
+    > div:last-child {
+      margin-bottom: 0;
+    }
+
+    > div:first-child {
+      margin-top: 0;
+    }
+  }
+}

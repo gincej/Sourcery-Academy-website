@@ -1,0 +1,67 @@
+.overlay {
+  align-items: center;
+  background-color: rgba(var(--color-overlay), 0.6);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.modal {
+  position: relative;
+  z-index: 2;
+
+  @media screen and (min-width: $screen-sm) {
+    padding: 0 3rem;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    height: auto;
+    margin: 0 auto;
+    max-width: 110rem;
+    padding: 0 5rem;
+  }
+
+  @media screen and (min-width: $screen-lg) {
+    padding: 0;
+  }
+}
+
+.content {
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.content > *:not(span) {
+  max-height: 80vh;
+  width: 100%;
+}
+
+.icon {
+  cursor: pointer;
+  position: absolute;
+  right: 1.5rem;
+  top: 0.5rem;
+
+  svg {
+    background-color: var(--color-background-modal-icon);
+    border-radius: 1.6rem;
+  }
+
+  @media screen and (min-width: $screen-sm) {
+    right: 4.5rem;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    right: 6.5rem;
+  }
+
+  @media screen and (min-width: $screen-lg) {
+    right: -2.5rem;
+    top: 0;
+  }
+}

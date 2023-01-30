@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+// Global Variables ____________________
+$max-screen-width: 1440px;
+$min-screen-width: 360px;
+// Font Sizes
+
+$heading-xl: 48px;
+$heading-l: 42px;
+$heading-m: 38px;
+$heading-s: 32px;
+$heading-xs: 30px;
+
+$body-xxlarge: 32px;
+$body-xlarge: 25px;
+$body-large: 20px;
+$body-regular: 18px;
+$body-medium: 16px;
+$body-small: 14px;
+
+// Font Weights
+
+$weight-regular: 400;
+$weight-bold: 700;
+
+// Font Families
+
+$family-heading: 'Montserrat', sans-serif;
+$family-body: 'Raleway', sans-serif;
+
+// Border
+
+$border-radius-default: 2rem;
+$border-radius-button: 6rem;
+$border-width-1: 1px;
+$border-width-2: 2px;
+$border-width-4: 4px;
+
+// Breakpoints
+$screen-sm: 600px;
+$screen-md: 900px;
+$screen-lg: 1200px;
+$screen-xl: $max-screen-width;
+
+// Colors
+
+$purple: #3e3691;
+$purple-opacity: #3e369185;
+$purple-light: #7971fd;
+$purpleblue: #483ed8;
+$purple-svg: #6c63ff;
+$purpleblue-light: #584dfc;
+$purple-lavender: #ecebfb;
+$purple-svg: #6c63ff;
+
+$black: #000;
+$blue: #0048c1;
+$blue-light: #3f73cb;
+$skyblue: #4d8af0;
+$skyblue-light: #71a1f3;
+$skyblue-svg: #17bce3;
+$green-dark: #007c6a;
+$green: #009b84;
+$green-light: #1faf9a;
+$green-blue: #0b555f;
+$green-light-svg: #1ce5af;
+
+$red: #b40031;
+$red-purplish: #c01745;
+$pink-red: #ed1d55;
+$pink: #ff2672;
+$pink-light: #f14a77;
+$grey: #3e3c4e;
+$grey-carbon: #5c5c5c;
+$grey-smoke: #868686;
+$orange: #f89e4b;
+$white: #fff;
+$white-smoke-darker: #dddae1;
+$white-smoke: #f6f5f7;
+
+// Spinner sizes
+$spinner-small: 30px;
+$spinner-medium: 60px;
+$spinner-large: 100px;
+
+:root {
+  --color-background-default: #{$white};
+  --color-background-modal-icon: rgba(62, 60, 78, 0.3);
+  --color-primary-text: #{$purple};
+  --color-primary: #{$purpleblue-light};
+  --color-primary-lighter: #{$purple-light};
+  --color-primary-darker: #{$purpleblue};
+  --color-warning: #{$orange};
+  --color-primary-svg: #{$purple-svg};
+  --color-primary-disabled: #bababa;
+  --color-overlay: 15, 23, 42;
+  --font-size-base: 1.6rem;
+  --font-family: system-ui;
+  --line-height-base: 1.5;
+
+  /* Spacers */
+  --spacer-xxs: 0.4rem;
+  --spacer-xs: 0.8rem;
+  --spacer-s: 1.2rem;
+  --spacer-m: 1.6rem;
+  --spacer-l: 2rem;
+  --spacer: var(--spacer-m);
+
+  /* alias for --spacer-m */
+  --spacer-l: 2rem;
+  --spacer-xl: 2.4rem;
+  --spacer-xxl: 3.2rem;
+  --spacer-xxxl: 4rem;
+
+  /* for removing default style */
+  --none: none;
+}
+
+.theme-dev {
+  --color-primary-text: #{$blue};
+  --color-primary: #{$skyblue};
+  --color-primary-lighter: #{$skyblue-light};
+  --color-primary-darker: #{$blue-light};
+  --color-primary-svg: #{$skyblue};
+  --color-svg: #{$skyblue-svg};
+  --color-secondary-svg: #{$skyblue-svg};
+  --color-purple-svg: #{$purple-svg};
+}
+
+.theme-qa {
+  --color-primary-text: #{$green-blue};
+  --color-primary: #{$green};
+  --color-primary-lighter: #{$green-light};
+  --color-primary-darker: #{$green-dark};
+  --color-primary-svg: #{$green};
+  --color-svg: #{$green-light-svg};
+  --color-secondary-svg: #{$green-light-svg};
+}
+
+.theme-fe {
+  --color-primary-text: #{$red};
+  --color-primary: #{$pink-red};
+  --color-primary-lighter: #{$pink-light};
+  --color-primary-darker: #{$red-purplish};
+  --color-primary-svg: #{$red};
+  --color-secondary-svg: #{$pink-red};
+}
+
+.theme-kids {
+  --color-primary-text: #a1321e;
+  --color-primary: #d05923;
+  --color-primary-lighter: #e49f8f;
+  --color-primary-darker: #b84621;
+  --color-primary-svg: #a1321e;
+  --color-secondary-svg: #e49f8f;
+}

@@ -1,0 +1,41 @@
+.form-input {
+  width: 100%;
+
+  &__label {
+    color: $grey-carbon;
+    font-size: $body-small;
+    position: relative;
+  }
+
+  &__label--required::before {
+    color: $pink;
+    content: '*';
+    left: -0.8rem;
+    position: absolute;
+  }
+
+  &__input {
+    border: 1px solid $grey-carbon;
+    border-radius: 5px;
+    color: $grey;
+    display: inline-block;
+    height: 4.7rem;
+    padding-left: 1.35rem;
+    width: 100%;
+  }
+
+  &__input::placeholder {
+    color: $grey-smoke;
+  }
+
+  &__input:focus {
+    border: 2px solid $purple;
+    outline: none;
+  }
+
+  .error {
+    color: $red;
+    font-size: $body-small;
+    margin-top: 0.5rem;
+  }
+}

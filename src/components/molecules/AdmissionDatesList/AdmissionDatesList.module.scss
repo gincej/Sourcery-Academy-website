@@ -1,0 +1,24 @@
+.list-container {
+  text-align: right;
+  width: 30.4rem;
+
+  &--empty {
+    font-weight: 700;
+    height: 30rem;
+    position: relative;
+    text-align: right;
+    top: 5rem;
+    width: 30.4rem;
+  }
+
+  @media screen and (max-width: $screen-md) {
+    max-width: 40rem;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}

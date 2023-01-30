@@ -1,0 +1,75 @@
+.preview-section {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  width: 50%;
+  @media screen and (max-width: $screen-lg) {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.bg-line {
+  height: 100%;
+  position: absolute;
+  transform: translate(0%, 10%);
+  z-index: -1;
+  @media screen and (max-width: $screen-lg) {
+    transform: translate(-3%, 10%);
+  }
+  @media screen and (max-width: $screen-md) {
+    display: none;
+  }
+}
+
+.video-placeholder {
+  border-radius: 30%;
+  width: 100%;
+
+  @media screen and (max-width: $screen-lg) {
+    justify-content: center;
+    width: 70%;
+  }
+
+  @media screen and (max-width: $screen-md) {
+    justify-content: center;
+    width: 85%;
+  }
+}
+
+.video-player {
+  display: flex;
+  height: auto;
+  width: 100%;
+}
+
+.play-button {
+  background: none;
+  border: 0;
+  border-radius: 30%;
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+
+  &:focus-visible {
+    outline: $border-width-4 dashed $orange;
+  }
+
+  &__play-icon {
+    height: 10%;
+    transition: all 0.2s ease-in-out;
+    width: 10%;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .play-button__play-icon {
+      height: 12%;
+      width: 12%;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.testimonial-section {
+  background-image: url('../../../assets/images/TestimonialsParticlesTop.svg'),
+    url('../../../assets/images/TestimonialsParticlesBottom.svg');
+  background-position: 10rem 8rem, 10rem bottom;
+  background-repeat: no-repeat;
+  padding: 15rem 0;
+  width: 100%;
+
+  @media (max-width: $screen-lg) {
+    background: none;
+    padding: 8rem 0;
+  }
+
+  @media (max-width: $screen-md) {
+    padding: 5rem 0;
+  }
+
+  @media (max-width: $screen-sm) {
+    padding: 3rem 0;
+  }
+
+  &__title {
+    font: {
+      line-height: 6rem;
+    }
+
+    margin-bottom: 6.7rem;
+    margin-top: 3rem;
+    text-align: end;
+
+    @media (max-width: $screen-lg) {
+      text-align: center;
+    }
+
+    @media (max-width: $screen-sm) {
+      font-size: 4rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 4rem;
+    justify-content: space-between;
+    width: 100%;
+
+    &--loading-error {
+      justify-content: center;
+    }
+
+    @media (max-width: $screen-lg) {
+      flex-wrap: wrap;
+      gap: 8rem;
+      justify-content: center;
+    }
+
+    @media (max-width: $screen-md) {
+      padding: 0 2rem;
+    }
+
+    @media (max-width: $screen-sm) {
+      padding: 0;
+    }
+  }
+}

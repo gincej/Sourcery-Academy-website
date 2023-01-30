@@ -1,0 +1,17 @@
+.arrow {
+  opacity: 0;
+  user-select: none;
+  z-index: 1;
+
+  &--right {
+    transform: rotate(90deg);
+  }
+
+  &--left {
+    transform: rotate(-90deg);
+  }
+}
+
+.show-arrow {
+  opacity: 0.5;
+}

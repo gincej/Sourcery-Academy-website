@@ -1,0 +1,35 @@
+.scrollbutton {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  svg {
+    transition: all 0.3s ease;
+  }
+
+  .scrollbutton__line {
+    background-color: $purple;
+    height: 4.8rem;
+    margin-bottom: 3.2rem;
+    transition: all 0.3s ease;
+    width: 0.2rem;
+  }
+
+  .scrollbutton__circle {
+    border-radius: 5rem;
+    padding-top: 0.2rem;
+  }
+}
+
+.scrollbutton:hover .scrollbutton__line {
+  background-color: $purple-light;
+}
+
+.scrollbutton:hover svg {
+  cursor: pointer;
+  scale: 1.05;
+
+  path {
+    stroke: #7971fd;
+  }
+}

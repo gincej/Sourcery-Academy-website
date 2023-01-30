@@ -1,0 +1,28 @@
+.speed-radio {
+  display: none;
+
+  &__label {
+    align-items: center;
+    background-color: $purpleblue-light;
+    border: 0;
+    border-radius: 0.2rem;
+    color: $white;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: $family-body;
+    font-size: $body-small;
+    height: 2.4rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 0.6rem;
+    width: 100%;
+
+    &:hover {
+      background-color: $skyblue;
+    }
+
+    &:focus-visible {
+      outline: $orange dashed 0.4rem;
+    }
+  }
+}

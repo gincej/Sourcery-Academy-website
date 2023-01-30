@@ -1,0 +1,50 @@
+.checkbox {
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+
+  &__hidden-input {
+    appearance: none;
+    margin: 0;
+  }
+
+  &__input {
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__input::before {
+    align-items: center;
+    border: 0.2rem solid $grey-carbon;
+    border-radius: 0.5rem;
+    color: transparent;
+    content: '\2714';
+    display: flex;
+    height: 2.2rem;
+    justify-content: center;
+    margin-right: 2.5rem;
+    padding: 0 0.2rem;
+  }
+
+  &__label {
+    color: $grey;
+  }
+}
+
+.checkbox__hidden-input:checked + .checkbox__input::before {
+  background-color: $purpleblue-light;
+  border: 0.2rem solid $purpleblue-light;
+  color: $white;
+}
+
+.checkbox__hidden-input:focus + .checkbox__input::before {
+  border: 0.2rem solid $purpleblue-light;
+}
+
+.error {
+  color: $red;
+  font-size: $body-small;
+  margin-top: 0.5rem;
+}

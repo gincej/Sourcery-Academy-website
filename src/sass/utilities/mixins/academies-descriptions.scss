@@ -1,0 +1,38 @@
+@mixin hide-image {
+  @media (max-width: 1044px) {
+    display: none;
+  }
+}
+
+@mixin description-break {
+  @media (max-width: 1044px) {
+    margin-top: 5rem;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@mixin column-reverse-margin {
+  @media (max-width: 1044px) {
+    flex-direction: column-reverse;
+    margin: 10rem 0;
+  }
+}
+
+@mixin accent-image-positioning($left, $right, $top, $width) {
+  left: $left;
+  position: absolute;
+  right: $right;
+  top: $top;
+  width: $width;
+  z-index: -1;
+}
+
+@mixin accent-image-positioning-at-1280($left, $top, $width) {
+  @media (max-width: 1280px) {
+    left: $left;
+    top: $top;
+    width: $width;
+  }
+}

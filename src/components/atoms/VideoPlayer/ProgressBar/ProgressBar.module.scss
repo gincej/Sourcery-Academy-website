@@ -1,0 +1,38 @@
+.progress {
+  max-height: 4.8rem;
+  width: 100%;
+
+  &__time {
+    color: $white;
+    left: 8rem;
+    pointer-events: none;
+    position: absolute;
+    top: calc(50% - 3.2rem);
+
+    @media (max-width: $screen-sm) {
+      left: 5rem;
+      top: calc(50% - 2.8rem);
+    }
+  }
+
+  input[type='range'] {
+    appearance: none;
+    background-color: $purple-opacity;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+
+    &:focus-visible {
+      outline: $orange dashed 0.4rem;
+      outline-offset: -0.4rem;
+    }
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      background-color: $purpleblue;
+      cursor: pointer;
+      height: 100%;
+      width: 0.1rem;
+    }
+  }
+}

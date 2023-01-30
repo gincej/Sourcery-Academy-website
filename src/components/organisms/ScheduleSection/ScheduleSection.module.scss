@@ -1,0 +1,102 @@
+.schedule {
+  background-image: url('../../../assets/images/ScheduleParticlesTop.svg'),
+    url('../../../assets/images/ScheduleParticlesBottom.svg');
+  background-position: 5rem 2rem, 30rem bottom;
+  background-repeat: no-repeat;
+  background-size: 128rem;
+  padding-bottom: 15rem;
+
+  @media screen and (max-width: $screen-lg) {
+    background: none;
+    padding: 8rem 0;
+  }
+
+  @media screen and (max-width: $screen-md) {
+    padding: 5rem 0;
+  }
+
+  @media screen and (max-width: $screen-sm) {
+    padding: 3rem 0;
+  }
+
+  &__title {
+    margin: 0;
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    gap: 4rem;
+    margin-top: 6rem;
+    position: relative;
+
+    @media screen and (max-width: $screen-lg) {
+      flex-direction: column;
+      gap: 6rem;
+      padding: 0 2rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    @media screen and (max-width: $screen-lg) {
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  &__months {
+    margin-bottom: 4.5rem;
+    margin-top: 0;
+    text-align: center;
+
+    @media screen and (max-width: $screen-lg) {
+      margin-top: 0.5rem;
+    }
+
+    @media screen and (min-width: $screen-md) {
+      white-space: nowrap;
+    }
+  }
+
+  &__lectures {
+    display: flex;
+    gap: 4rem;
+
+    @media screen and (max-width: 700px) {
+      flex-direction: column;
+    }
+  }
+
+  &__lectures-split {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: 50%;
+
+    @media screen and (max-width: $screen-lg) {
+      width: auto;
+    }
+  }
+
+  &__line {
+    height: 68rem;
+    position: absolute;
+    right: -6rem;
+
+    path {
+      stroke: var(--color-primary-text);
+    }
+
+    @media screen and (max-width: $screen-lg) {
+      right: 2rem;
+    }
+
+    @media screen and (max-width: $screen-md) {
+      display: none;
+    }
+  }
+}

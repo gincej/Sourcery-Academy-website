@@ -1,0 +1,51 @@
+.btn {
+  background-color: var(--color-primary);
+  border: $border-width-2 solid var(--color-primary);
+  border-radius: $border-radius-button;
+  color: $white;
+  font-weight: $weight-bold;
+  line-height: 125%;
+  padding: 12px 24px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+  width: max-content;
+
+  &:hover {
+    background-color: var(--color-primary-darker);
+    border: $border-width-2 solid var(--color-primary-darker);
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: var(--color-primary-lighter);
+    border: $border-width-2 solid var(--color-primary-lighter);
+  }
+
+  &:focus {
+    background-color: var(--color-primary-lighter);
+    border: $border-width-2 solid var(--color-primary-darker);
+  }
+
+  &:focus-visible {
+    outline: $border-width-4 dashed $orange;
+  }
+
+  &--disabled {
+    background-color: var(--color-primary-disabled);
+    border-color: var(--color-primary-disabled);
+    pointer-events: none;
+
+    &:hover {
+      cursor: default;
+    }
+
+    &:active,
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      background-color: var(--color-primary-disabled);
+      border-color: var(--color-primary-disabled);
+      pointer-events: none;
+    }
+  }
+}

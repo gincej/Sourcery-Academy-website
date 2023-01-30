@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  position: relative;
+  width: 100%;
+
+  @media only screen and (min-width: $screen-sm) {
+    gap: 10rem;
+  }
+
+  @media only screen and (min-width: $screen-lg) {
+    background-image: url('../../../assets/images/StepsParticles.svg');
+    background-position: 0 -2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: space-between;
+    padding-bottom: 16rem;
+    row-gap: 3rem;
+  }
+
+  .line {
+    display: none;
+
+    @media screen and (min-width: $screen-lg) {
+      display: block;
+      height: 80%;
+      left: -6rem;
+      position: absolute;
+      z-index: -1;
+    }
+
+    @media screen and (min-width: $screen-xl) {
+      left: -7.5rem;
+    }
+  }
+}

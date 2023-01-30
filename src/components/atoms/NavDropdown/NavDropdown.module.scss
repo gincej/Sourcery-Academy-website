@@ -1,0 +1,84 @@
+.dropdown {
+  animation: appear 0.3s ease-in-out;
+
+  @media screen and (min-width: $screen-md) {
+    background-color: $white;
+    border-radius: 1rem;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.15));
+    padding: 0.5rem 0;
+    position: absolute;
+    right: 48%;
+    top: 5rem;
+  }
+
+  &__arrowUp {
+    display: none;
+
+    @media screen and (min-width: $screen-md) {
+      border-bottom: 10px solid $white;
+      border-left: 13px solid transparent;
+      border-right: 13px solid transparent;
+      display: block;
+      height: 0;
+      position: absolute;
+      right: 8.5rem;
+      top: -1rem;
+      width: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 0 1rem;
+    text-align: center;
+    width: 100%;
+
+    @media screen and (min-width: $screen-md) {
+      padding: 0;
+      text-align: left;
+    }
+  }
+
+  &__list li {
+    width: 100%;
+
+    @media screen and (min-width: $screen-md) {
+      background-color: $white;
+      display: flex;
+      margin-top: 0.15rem;
+    }
+  }
+
+  &__list li a {
+    font-size: $body-small;
+    font-weight: $weight-regular;
+    padding: 0.85rem 2rem 1rem;
+
+    &:focus-visible {
+      outline: $border-width-4 dashed $orange;
+      outline-offset: -0.5rem;
+    }
+
+    @media screen and (min-width: $screen-md) {
+      padding: 1.5rem 2.2rem;
+      width: 100%;
+
+      &:hover {
+        background-color: $white-smoke;
+      }
+    }
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

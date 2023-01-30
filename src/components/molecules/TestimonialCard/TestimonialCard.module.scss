@@ -1,0 +1,81 @@
+.card {
+  background-color: $white;
+  border: 0.2rem solid var(--color-primary-text);
+  border-radius: 1.6rem;
+  box-shadow: -2rem 2rem $white-smoke;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 34.3rem;
+
+  @media (max-width: $screen-sm) {
+    box-shadow: none;
+    width: 30rem;
+  }
+
+  > * > * {
+    color: var(--color-primary-text);
+  }
+
+  &__image {
+    align-self: center;
+    border-radius: 50%;
+    height: 8rem;
+    width: 8rem;
+    margin: {
+      bottom: 0.2rem;
+      top: 3.5rem;
+    }
+    @media (max-width: 500px) {
+      margin-top: 1rem;
+    }
+  }
+
+  &__body {
+    padding: 0 3rem;
+  }
+
+  &__text {
+    font-size: $body-small;
+    margin: -1rem 0;
+  }
+
+  &__quotation {
+    font-family: $family-heading;
+    font-size: 4rem;
+    font-weight: $weight-bold;
+    margin: 0;
+
+    &--bottom {
+      text-align: end;
+    }
+  }
+
+  &__author {
+    margin: 1rem 3rem 4rem;
+    text-align: center;
+
+    > * {
+      margin: 0;
+    }
+
+    @media (max-width: 500px) {
+      margin: 0;
+    }
+  }
+
+  &__name {
+    font-size: $body-large;
+    font-weight: $weight-bold;
+    padding-bottom: 1rem;
+  }
+
+  &__academy {
+    font-size: $body-small;
+
+    @media (max-width: 500px) {
+      padding: 0 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+}

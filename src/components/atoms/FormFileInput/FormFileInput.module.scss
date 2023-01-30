@@ -1,0 +1,49 @@
+.file-input {
+  align-items: center;
+  border: 1px solid $grey-carbon;
+  border-radius: 0.5rem;
+  color: $grey-smoke;
+  display: flex;
+  height: 4.7rem;
+  justify-content: flex-start;
+  line-height: $body-regular;
+  overflow: hidden;
+  padding-left: 1.35rem;
+  position: relative;
+  white-space: nowrap;
+
+  @media screen and (max-width: $screen-sm) {
+    line-height: $body-medium;
+  }
+
+  input[type='file'] {
+    left: 0;
+    opacity: 0;
+    position: absolute;
+  }
+
+  &__placeholder {
+    color: $grey-smoke;
+    line-height: 2rem;
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  svg {
+    cursor: pointer;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.2rem;
+  }
+}
+
+.file-input:has(input:focus) {
+  border: 2px solid $purple;
+}
+
+.error {
+  color: $red;
+  font-size: $body-small;
+  margin-top: 0.5rem;
+}

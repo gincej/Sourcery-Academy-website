@@ -1,0 +1,64 @@
+.form {
+  background-color: var(--color-background-default);
+  max-width: 50.7rem;
+  width: 100%;
+
+  button {
+    font-family: $family-body;
+    font-size: $body-regular;
+    font-weight: $weight-bold;
+  }
+
+  .error {
+    color: $red;
+    font-weight: $weight-bold;
+    margin-top: 1rem;
+  }
+
+  label::before {
+    font-size: $body-regular;
+  }
+
+  label {
+    font-family: $family-body;
+  }
+
+  input {
+    font-family: $family-body;
+    font-size: $body-regular;
+    line-height: $body-regular;
+
+    @media screen and (max-width: $screen-sm) {
+      font-size: $body-medium;
+      line-height: $body-medium;
+    }
+  }
+
+  h2 {
+    font-size: $heading-l;
+
+    @media screen and (max-width: $screen-sm) {
+      font-size: $heading-xs;
+    }
+  }
+}
+
+.registered {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__svg {
+    margin-bottom: 4rem;
+  }
+
+  &__heading {
+    margin-bottom: 1.2rem;
+  }
+
+  &__paragraph {
+    color: $purple;
+    font-weight: $weight-bold;
+  }
+}
